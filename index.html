@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
@@ -8,13 +9,32 @@
 	<title></title>
 </head>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		function getQuote(){
+			var quotes = ["Hello World", "Hello Sea!", "Hello Sky!"];
+			var authors = ["-Author 1", "-Author 2", "-Author 3"];
+
+			var randomNum = Math.floor((Math.random()*quotes.length));
+			var randomQuote = quotes[randomNum];
+			var randomAuthor = authors[randomNum];
+
+			$(".quote").text(randomQuote);
+			$(".author").text(randomAuthor);
+		}
+		$(".btn").on("click", function(){
+			getQuote();
+		});
+	});
+</script>
+
 <body>
 	<div class="container-fluid text-center pageOne">
 		<h1>Random Quote Generator</h1>
 		<p> Insert Quote Here </p>
 		<button class="btn btn-default" type="Submit">New Quote</button>
 		<div class="quotes">
-			<span class="quote" style="font-family: 'Tajawal', sans-serif;">Hello World</span>
+			<span class="quote">Hello World</span>
 			<span class="author">- Christian Cebrero</span>
 		</div>
 
