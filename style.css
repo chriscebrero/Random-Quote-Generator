@@ -3,3 +3,27 @@
 	background-size: cover;
 	height: 800px;
 }
+
+.quote {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 4.0em;
+	color: rgb(230,230,250);
+}
+
+.author {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 4.0em;
+	color: rgb(230,230,250);
+	font-style: italic;
+
+}
+
+.quotes {
+	background-color: black;
+	margin-right: auto;
+	margin-left: auto;
+	width: 33%;
+	margin-top: 50px;
+	border-color: white;
+	border-style: solid;
+}
